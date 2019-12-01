@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2048</title>
+    <style>
+        #table {
+            border-collapse: collapse;
+            user-select: none; /* 마우스 드래그시 블락 씌워지는것 방지 */
+        }
+        #table td {
+            border: 5px solid black;
+            width: 150px;
+            height: 150px;
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+        }
+        #score {
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="table">
+
+    </table>
+    <div id="score">0</div>
+    <script src="index.js"></script>
+</body>
+
+</html>

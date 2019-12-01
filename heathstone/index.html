@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hearthstone</title>
+    <style>
+        #my,
+        #rival {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 50px;
+        }
+
+        .turn {
+            border: 1px solid black;
+        }
+
+        #my-deck,
+        #rival-deck {
+            display: inline-block;
+            vertical-align: top;
+            width: 200px;
+            background: silver;
+        }
+
+        #rival-deck,
+        #rival-hero,
+        #rival-cards,
+        #my-cards,
+        #my-hero,
+        #my-deck {
+            text-align: center;
+        }
+
+        .card {
+            width: 50px;
+            height: 75px;
+            display: inline-block;
+            position: relative;
+            border: 1px solid black;
+            margin-bottom: 10px;
+        }
+
+        .card-name {
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .card-att,
+        .card-hp,
+        .card-cost {
+            font-size: 12px;
+            text-align: center;
+            line-height: 15px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            border: 1px solid black;
+        }
+
+        .card-cost {
+            bottom: auto;
+            top: 0;
+            left: 0;
+            background-color: blue;
+            color: white;
+        }
+
+        .card-att {
+            left: 0;
+            background-color: yellow;
+        }
+
+        .card-hp {
+            right: 0;
+            background-color: red;
+            color: white;
+        }
+
+        .card-hidden {
+            display: none;
+        }
+        
+        .card-selected {
+            border: 2px solid red;
+        }
+        
+        .card-turnover {
+            background: gray;
+        }
+
+        #turn-btn {
+            float: right;
+            position: relative;
+            top: -18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="rival">
+        <div>코스트: <span id="rival-cost">10</span>/<span>10</span></div>
+        <div id="rival-hero"></div>
+        <div id="rival-cards" style="height: 150px">
+        </div>
+    </div>
+    <div id="rival-deck">
+        <div>덱</div>
+    </div>
+    <hr />
+    <button id="turn-btn">턴 넘기기</button>
+    <div id="my" class="turn">
+        <div id="my-cards" style="height: 150px">
+        </div>
+        <div id="my-hero"></div>
+        <div>코스트: <span id="my-cost">10</span>/</span>10</span></div>
+    </div>
+    <div id="my-deck">
+        <div>덱</div>
+    </div>
+    <div class="card-hidden">
+        <div class="card">
+            <div class="card-cost"></div>
+            <div class="card-att"></div>
+            <div class="card-hp"></div>
+        </div>
+    </div>
+    <div>빨강: 체력, 노랑: 공격력 적 영웅의 체력이 0이되면 승리, 영웅을 보호하기 위해 쫄병들을 코스트(파랑) 내에서 뽑을 수 있다</div>
+    <script src="index.js"></script>
+</body>
+
+</html>
